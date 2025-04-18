@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+    <title>Crypto Futures Risk Calculator</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script defer src="./scripts/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+
+    
+    
+</head>
+<body>
+    <h2>Crypto Futures Risk Calculator</h2>
+    <label for="direction">Trade Type:</label>
+    <select id="direction">
+        <option value="long" class="long">Long</option>
+        <option value="short" class="short">Short</option>
+    </select>
+
+    <div class="metrics">
+        <label >Entry Price (USDT):</label>
+        <input type="number" id="entryPrice" step="any"/>
+
+        <label >Leverage:</label>
+        <input type="number" id="leverage" step="any"/>
+
+        <label >Margin Used (USDT):</label>
+        <input type="number" id="margin" step="any"/>
+
+        <label >Take Profit Price (optional):</label>
+        <input type="number" id="tp" step="any"/>
+
+        <label >Stop Loss Price (optional):</label>
+        <input type="number" id="sl" step="any"/>
+
+        <button onclick = "calculate()">Calculate</button>
+
+        
+
+    </div>
+    <div class="result" id="output"></div>
+
+
+
+
+<p><b></b></p>
+
+</body>
+
+</html>
