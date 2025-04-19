@@ -6,16 +6,6 @@ function calculate() {
     const sl = parseFloat(document.getElementById("sl").value);
     const direction = document.getElementById("direction").value;
     
-
-    if (!entry || !lev || !margin) {
-        document.getElementById("output").innerHTML = "Please enter Entry, Leverage, and Margin";
-        document.getElementById("output").style.color = "red";
-        return
-    }
-    else {
-        document.getElementById("output").style.color = "#00ffd1";
-    }
-
     if(direction == "long"){
       const liq = entry * (1 - (1 / lev));
       const posSize = (margin * lev) / entry;
@@ -33,7 +23,23 @@ function calculate() {
 
       // Stop Loss Warning
       let slWarning = (smartSL - liq) < entry * 0.05 ? "YES" : "NO";
-    };
+    }else
+    {
+      
+      
+    }
+
+    if (!entry || !lev || !margin) {
+        document.getElementById("output").innerHTML = "Please enter Entry, Leverage, and Margin";
+        document.getElementById("output").style.color = "red";
+        return
+    }
+    else {
+        document.getElementById("output").style.color = "#00ffd1";
+    }
+
+    
+
     document.getElementById("output").innerHTML = `
     <p><b>Estimated Liquidation Price:</b> ${liq.toFixed(6)}</p>
     <p><b>Position Size (Tokens):</b> ${posSize.toFixed(6)}</p>
