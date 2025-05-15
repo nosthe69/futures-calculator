@@ -1,4 +1,6 @@
 # futures-calculator
+![image](https://github.com/user-attachments/assets/c8fca443-9088-49b1-8caf-64828bf2db65)
+
 A lightweight futures trading calculator that helps users analyze their trade setups by inputting key details and receiving instant stats like risk, reward, liquidation price, and more.
 
 # How does it work
@@ -7,6 +9,8 @@ Before commiting to a trades, user input the following key details:
   •Leverage
   •Margin Used
   •Take Profit and Stop Loss (optional).
+  ![image](https://github.com/user-attachments/assets/76f5bf55-012a-4678-8b18-7c8b415b1472)
+
 
 After clicking the **Calculate** button, the app instantly provides:
   **Estimated Liquidation Price**
